@@ -316,11 +316,11 @@ client.on('message', message => {
     if (message.content === 'Hhelp') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
-        .setDescription('**برفكس البوت (H)** 
+        .setDescription('**برفكس البوت (H)**')
         .addField('play', 'لتشغيل اغنية')
         .addField('join', 'دخول رومك الصوتي')
-        .addField('disconnect', 'الخروج من رومك الصوتي')
-        .addField('stop', 'تخطي الأغنية')
+        .addField('stop', 'الخروج من رومك الصوتي')
+        .addField('skip', 'تخطي الأغنية')
         .addField('pause', 'ايقاف الاغنية مؤقتا')
         .addField('resume', 'تكملة الاغنية')
         .addField('queue', 'اظهار قائمة التشغيل')
@@ -354,7 +354,7 @@ client.user.setStatus("dnd")
 });
 
 client.on('ready',async () => {
-  client.channels.find(ch => ch.id === "406530480138092547" && ch.type === 'voice').join();
+  client.channels.find(ch => ch.id === "497582850984509441" && ch.type === 'voice').join();
 });
 
 client.login(process.env.BOT_TOKEN);
