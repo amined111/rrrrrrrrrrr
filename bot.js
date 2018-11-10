@@ -10,7 +10,7 @@ client.on('message', message => {
   if (message.author.id !== "426033902319304705") return;
  
 if (message.content.startsWith(prefix + 'setstream')) {
-  client.user.setGame(argresult, "https://www.twitch.tv/taino118");
+  client.user.setGame(argresult, "https://www.twitch.tv/hafsa121");
      console.log('test' + argresult);
     message.channel.sendMessage(`Streaming: **${argresult}`)
 }
