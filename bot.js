@@ -20,3 +20,4 @@ client.user.setStatus("dnd")
 
 
 client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN1);
