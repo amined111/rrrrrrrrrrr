@@ -8,7 +8,7 @@ var prefix = "!";//البرفكس
 if (msg.author.bot) return;
 if(msg.content.startsWith(prefix + "setstream")) {
       if(msg.author.id != "426033902319304705") return msg.reply("هذا الامر لصحاب الحساب");
-      client.user.setGame(${argresult},"http://twitch.tv/S-F%22)
+      client.user.setGame(${argresult},"http://twitch.tv/S-F%22")
       var Die = new Discord.RichEmbed()
       .setTitle(":white_check_mark:تم تغير الستريمنق الخاص بك")
      .addField("New Stream",${argresult}, true)
