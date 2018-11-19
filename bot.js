@@ -1,17 +1,19 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const prefix = "H";
 
-
-client.on('ready', () => {
-   console.log(`----------------`);
-      console.log(`Desert Bot- Script By : i1Suhaib`);
-        console.log(`----------------`);
-      console.log(`ON ${client.guilds.size} Servers '     Script By : i1Suhaib ' `);
-    console.log(`----------------`);
-  console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`تناكت`,"http://twitch.tv/S-F")
-client.user.setStatus("dnd")
+client.on('message', msg => {
+var prefix = "!";//البرفكس
+  var args = msg.content.split(' ').slice(1);
+  var argresult = args.join(' ');
+if (msg.author.bot) return;
+if(msg.content.startsWith(prefix + "setstream")) {
+      if(msg.author.id != "426033902319304705") return msg.reply("هذا الامر لصحاب الحساب");
+      client.user.setGame(${argresult},"http://twitch.tv/S-F%22)
+      var Die = new Discord.RichEmbed()
+      .setTitle(":white_check_mark:تم تغير الستريمنق الخاص بك")
+     .addField("New Stream",${argresult}, true)
+     msg.channel.sendEmbed(Die);
+}
 });
 
 
