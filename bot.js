@@ -1,22 +1,34 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
+const prefix = "H";
 
-client.on('message', msg => {
-var prefix = "H";//البرفكس
-  var args = msg.content.split(' ').slice(1);
+
+client.on('message', message => {
+  if (!message.content.startsWith(prefix)) return;
+  var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
-if (msg.author.bot) return;
-if(msg.content.startsWith(prefix + "setstream")) {
-      if(msg.author.id != "485917652120764429") return msg.reply("هذا الامر لصحاب الحساب");
-      client.user.setGame(${argresult},"http://twitch.tv/SSA")
-      var Die = new Discord.RichEmbed()
-      .setTitle(":white_check_mark:تم تغير الستريمنق الخاص بك")
-     .addField("New Stream",${argresult}, true)
-     msg.channel.sendEmbed(Die);
+  if (message.author.id !== "485917652120764429") return;
+ 
+if (message.content.startsWith(prefix + 'setstream')) {
+  client.user.setGame(argresult, "https://www.twitch.tv/amine12a");
+     console.log('test' + argresult);
+    message.channel.sendMessage(`**:white_check_mark:  : ${argresult}**`)
 }
+if (message.content.startsWith(prefix + 'setgame')) {
+  client.user.setGame(argresult);
+    message.channel.sendMessage(`**:white_check_mark:  : ${argresult}**`)
+} 
+
+if (message.content.startsWith(prefix + 'setwatch')) {
+client.user.setActivity(argresult, {type:'WATCHING'});
+    message.channel.sendMessage(`**:white_check_mark:  : ${argresult}**`)
+} 
+if (message.content.startsWith(prefix + 'setlisteng')) {
+client.user.setActivity(argresult, {type:'LISTENING'});
+    message.channel.sendMessage(`**:white_check_mark:  : ${argresult}**`)
+}
+  
 });
-
-
 
 
 
