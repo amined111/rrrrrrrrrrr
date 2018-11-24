@@ -1,34 +1,18 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const prefix = "H";
+var prefix = "H";
 
-
-client.on('message', message => {
-  if (!message.content.startsWith(prefix)) return;
-  var args = message.content.split(' ').slice(1);
-  var argresult = args.join(' ');
-  if (message.author.id !== "426033902319304705") return;
- 
-if (message.content.startsWith(prefix + 'setstream')) {
-  client.user.setGame(argresult, "https://www.twitch.tv/amine12a");
-     console.log('test' + argresult);
-    message.channel.sendMessage(`**:white_check_mark:  : ${argresult}**`)
-}
-if (message.content.startsWith(prefix + 'setgame')) {
-  client.user.setGame(argresult);
-    message.channel.sendMessage(`**:white_check_mark:  : ${argresult}**`)
-} 
-
-if (message.content.startsWith(prefix + 'setwatch')) {
-client.user.setActivity(argresult, {type:'WATCHING'});
-    message.channel.sendMessage(`**:white_check_mark:  : ${argresult}**`)
-} 
-if (message.content.startsWith(prefix + 'setlisteng')) {
-client.user.setActivity(argresult, {type:'LISTENING'});
-    message.channel.sendMessage(`**:white_check_mark:  : ${argresult}**`)
-}
-  
+client.on('ready', () => {
+   console.log(`----------------`);
+      console.log(`Desert Bot- Script By : i1Suhaib`);
+        console.log(`----------------`);
+      console.log(`ON ${client.guilds.size} Servers '     Script By : i1Suhaib ' `);
+    console.log(`----------------`);
+  console.log(`Logged in as ${client.user.tag}!`);
+client.user.setGame(`B3ACHWA2IYAT L9ADAR T7NA M3A WLAD L9HAB`,"http://twitch.tv/S-F")
+client.user.setStatus("dnd")
 });
+
 
 
 
