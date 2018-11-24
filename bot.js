@@ -9,7 +9,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : i1Suhaib ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`B3ACHWA2IYAT L9ADAR T7NA M3A WLAD L9HAB`,"http://twitch.tv/S-F")
+client.user.setGame(`B3ACHWA2IYAT L9ADAR T7NA M3A WLAD L9HAB.`,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
 });
 
